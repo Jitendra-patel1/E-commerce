@@ -85,11 +85,13 @@ public class CartServiceImpl implements CartService {
         }
         try{
             Ordered order = orderService.placeOrder(customer,card);  // throw exception if product goes out of stock
-
             resetCart(cart);
+            customer.getOrderList().add(order);
+
 
             Ordered savedOrder = orderedRepository.save(order);
-            customer.getOrderList().add(savedOrder);
+
+
 
 
 

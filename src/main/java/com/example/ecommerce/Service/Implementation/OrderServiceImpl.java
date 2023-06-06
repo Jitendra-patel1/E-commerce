@@ -58,6 +58,7 @@ public class OrderServiceImpl implements OrderService {
         order.setItems(orderedItems);
         for(Item item: orderedItems) {
             item.setOrder(order);
+
         }
         order.setTotalValue(cart.getCartTotal());
         return order;

@@ -50,7 +50,7 @@ public class ItemServiceImpl implements ItemService {
         }
 
         Item item = ItemTransformer.ItemRequestDtoToItem(itemRequestDto);
-        //item.setCart(customer.getCart());
+        item.setCart(customer.getCart());
         item.setProduct(product);
         //we are not setting a order because we are not odering write now
 
